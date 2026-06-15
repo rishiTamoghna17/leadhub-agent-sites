@@ -13,13 +13,13 @@
       <a href="{{ if eq .Section "agents" }}#home{{ else }}/{{ end }}" class="logo">
         {{ if eq .Section "agents" }}
           {{ if .Params.logo }}
-            <img src="{{ .Params.logo }}" alt="Logo" style="height: 32px; width: auto; object-fit: contain; vertical-align: middle;">
+            <img src="{{ .Params.logo | safeURL }}" alt="Logo" style="height: 32px; width: auto; object-fit: contain; vertical-align: middle;">
           {{ else }}
             {{ .Params.name }}
           {{ end }}
         {{ else }}
           {{ if .Site.Home.Params.contact.logo }}
-            <img src="{{ .Site.Home.Params.contact.logo }}" alt="Logo" style="height: 32px; width: auto; object-fit: contain; vertical-align: middle;">
+            <img src="{{ .Site.Home.Params.contact.logo | safeURL }}" alt="Logo" style="height: 32px; width: auto; object-fit: contain; vertical-align: middle;">
           {{ else }}
             {{ .Site.Home.Params.name }}
           {{ end }}

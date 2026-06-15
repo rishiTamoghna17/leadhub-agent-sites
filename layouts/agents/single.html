@@ -32,7 +32,7 @@
         <div class="about-card">
           {{ if .Params.photo }}
             <div class="profile-photo-container" style="text-align: center; margin-bottom: 1.5rem;">
-              <img src="{{ .Params.photo }}" alt="{{ .Params.name }}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #0d9488; display: inline-block;">
+              <img src="{{ .Params.photo | safeURL }}" alt="{{ .Params.name }}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #0d9488; display: inline-block;">
             </div>
           {{ end }}
           <h3>Contact Specialist</h3>
