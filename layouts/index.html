@@ -53,8 +53,10 @@
               {{ end }}
             {{ end }}
           </ul>
-          {{ if and .Site.Home.Params.contact (index .Site.Home.Params.contact "email") }}
-            <a href="mailto:{{ (index .Site.Home.Params.contact "email") }}" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Email Me Directly</a>
+          {{ if .Site.Home.Params.contact }}
+            {{ if (index .Site.Home.Params.contact "email") }}
+              <a href="mailto:{{ (index .Site.Home.Params.contact "email") }}" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Email Me Directly</a>
+            {{ end }}
           {{ end }}
         </div>
       </div>
